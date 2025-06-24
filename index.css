@@ -1,0 +1,139 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+body {
+  color: #333;
+}
+
+/* Header styles */
+.u-header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.u-container-logo-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.u-logo-image {
+  width: 60px;
+  height: 60px;
+}
+
+.u-site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.date-time {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Main content with background image */
+.main-content {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url('images/photo-1505533321630-975218a5f66f.jpeg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Title */
+.main-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Weather boxes container */
+.weather-boxes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual weather box */
+.weather-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+.weather-box:hover {
+  transform: translateY(-5px);
+}
+
+.weather-box img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.weather-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.weather-box p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Gap between first and second row */
+.gap-1cm {
+  height: 1cm;
+  width: 100%;
+  flex-basis: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .main-content h1 {
+    font-size: 2rem;
+  }
+  
+  .weather-box {
+    width: 100%;
+    max-width: 300px;
+  }
+}
